@@ -1,0 +1,15 @@
+Date: 19/3/2020
+Enter Number of Mobile Sold 6
+Enter the prices: 55 65 150 145 125 95 
+Highest Cost is: 150
+Lowest Cost is: 55
+Avarage Cost is:105.833
+
+Date: 19/3/2020
+Enter Number of Mobile Sold 5
+Enter the prices: 45 65 155 145 225 
+Highest Cost is: 225
+Lowest Cost is: 45
+Avarage Cost is:127
+
+
