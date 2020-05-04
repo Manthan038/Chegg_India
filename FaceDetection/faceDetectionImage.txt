@@ -1,0 +1,38 @@
+
+
+  
+
+
+**********Chegg Face reocgnition system in matlab****************
+
+Code :---
+
+
+%Detect objects using Viola-Jones Algorithm
+
+%To detect Face         
+%Define and set-up your cascade object detector using the constructor:
+FaceDetect = vision.CascadeObjectDetector;
+
+
+%It creates a system object FaceDetect that detects objects using Viola-Jones algorithm. 
+%Its classification model property controls the type of object to detect.
+
+
+%Read the input image
+I = imread('Chegg.jpg');
+
+
+%Use the step syntax with input image I, selected cascade object FaceDetect 
+%and other optional properties to perform detection.
+%Returns Bounding Box values based on number of objects
+%Input image I must be a gray scale or true colour (RGB) image.
+BB = step(FaceDetect,I);
+
+figure,
+imshow(I); hold on
+for i = 1:size(BB,1)
+    rectangle('Position',BB(i,:),'LineWidth',5,'LineStyle','-','EdgeColor','r');
+end
+title('Face Detection');
+hold off;
