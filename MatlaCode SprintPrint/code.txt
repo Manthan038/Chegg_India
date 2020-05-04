@@ -1,0 +1,149 @@
+A = zeros(5,5);%You can change this mxn to whatever dims you like, be it square(m=n) or rectangular matrix.
+[m,n] = size(A);
+%m = no of rows
+%n = no of columns
+%A = matrix to be filled with spiral values
+ %This code works fine. I commented an eg also below
+top = 1;
+bottom = m;
+left = 1;
+right = n; %To keep track of the four directions
+value = 1;%Let us strat from 1
+while true
+    %Top Row First
+    if left>right
+        break;
+    end
+    for i = left:right
+        A(top,i) = value;
+        value = value + 1;
+    end
+    top = top + 1;
+    %Then The RightMost Column
+    if top>bottom
+        break;
+    end
+    for i = top:bottom
+        A(i,right) = value;
+        value = value + 1;
+    end
+    right = right - 1;
+    %Then Bottom Row
+    if left>right
+        break;
+    end
+    for i = right:-1:left
+        A(bottom,i) = value;
+        value = value + 1;
+    end
+    bottom = bottom - 1;
+    %Then The Left Column
+    if top>bottom
+        break;
+    end
+    for i = bottom:-1:top
+        A(i,left) = value;
+        value = value + 1;
+    end
+    left = left + 1;
+end
+A
+
+
+n=5;
+for i=2:n+1
+for j=1:i-1
+   fprintf('*');
+fprintf('');
+end
+fprintf('\n');
+end
+
+n=5;
+for i=1:n
+    for j=1:i
+        x(i,j) = '*';
+    end
+end
+disp(fliplr(x));
+
+
+A=['A ','B ','C ','D ','E ','F ','G ','F ','E ','D ','C ','B ','A '];
+A(1,2)
+A
+
+
+
+
+
+
+
+
+
+
+x = [15,20,25,30,35]
+y = [10,55,176,289,320]
+format long
+b1 = x\y
+yCalc1 = b1*x;
+scatter(x,y)
+hold on
+plot(x,yCalc1)
+xlabel('Population of state')
+ylabel('Fatal traffic accidents per state')
+title('Linear Regression Relation Between Accidents & Population')
+grid on
+
+
+
+
+
+
+
+
+
+% Create and Plot Raw Data
+x = [15,20,25,30,35];
+y = [10,55,176,289,320];
+plot(x,y,'LineWidth',2)
+% Fit line to data using polyfit
+c = polyfit(x,y,1);
+% Display evaluated equation y = m*x + b
+disp(['Equation is y = x)])
+% Evaluate fit equation using polyval
+y_est = polyval(c,x);
+% Add trend line to plot
+hold on
+plot(x,y_est,'r--','LineWidth',2)
+hold off
+
+
+
+
+
+
+x = [15,20,25,30,35];
+y = [10,55,176,289,320];
+f = fit(x,y,'exp1')
+plot(f,x,y)
+
+
+x = [15,20,25,30,35];
+y = [10,55,176,289,320];
+plot(x,y,'+r'), hold on
+p = polyfit(x,y,'exp1'); 
+m = p(1);
+b = exp(p(2));
+ezplot(@(x) b*x.^m,[x(1) x(end)])
+
+
+
+x = [15,20,25,30,35];
+y = [10,55,176,289,320];                                                       % Extract Y-Data
+XL = [min(x) max(x)];                                               % Get X-Limits
+P = [x(:), ones(size(x(:)))] \ y(:);                                % Estimate Linear Fit Parameters
+LinFit = [XL(:) [1;1]] * P;                                         % Linear Fit
+Slope = P(1);
+hold on
+plot(XL, LinFit, '-r', 'LineWidth',1.5)
+hold off
