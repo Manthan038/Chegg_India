@@ -1,0 +1,65 @@
+   Wind Heat Month Day
+1    18   10    12  22
+2     6   41     5   4
+3    78   19     6  21
+4    18   74     3   4
+5    57   67     5  25
+6     5    5     6   7
+7    18   10     2  17
+8    19   21     6  19
+9    30   36     5  12
+10  322   18     8   4
+11   11   80     9  12
+12   68   72     6  15
+13   23    5     5  23
+
+columns name of data frame::: Wind Heat Month Day 
+ assignment 3 rows 
+  Wind Heat Month Day
+1   18   10    12  22
+2    6   41     5   4
+3   78   19     6  21
+
+'data.frame':	13 obs. of  4 variables:
+ $ Wind : num  18 6 78 18 57 5 18 19 30 322 ...
+ $ Heat : num  10 41 19 74 67 5 10 21 36 18 ...
+ $ Month: num  12 5 6 3 5 6 2 6 5 8 ...
+ $ Day  : num  22 4 21 4 25 7 17 19 12 4 ...
+
+
+Shape of assignment::: 13 4 
+Extraction of last 7 rows
+   Wind Heat Month Day
+7    18   10     2  17
+8    19   21     6  19
+9    30   36     5  12
+10  322   18     8   4
+11   11   80     9  12
+12   68   72     6  15
+13   23    5     5  23
+ 8th row value:
+  Wind Heat Month Day
+8   19   21     6  19
+Mean of Heat column:  35.23077 
+
+ SubSet......
+
+   Wind Heat Month Day
+5    57   67     5  25
+12   68   72     6  15
+
+Mean of Day is: 20When Heat  Month is 6 then Mean of Day is:: 15.5 
+Maximum Heat in the Month of May(5):: 72 
+Sorting data as per Wind
+   Wind Heat Month Day
+10  322   18     8   4
+3    78   19     6  21
+12   68   72     6  15
+5    57   67     5  25
+9    30   36     5  12
+13   23    5     5  23
+8    19   21     6  19
+1    18   10    12  22
+4    18   74     3   4
+7    18   10     2  17
+Avarage of 10 Day columns in new data :: 16.2
