@@ -1,0 +1,1 @@
+we have to give question from RDMS and have to find out the relation in which normal form it is. and if not then make it.
